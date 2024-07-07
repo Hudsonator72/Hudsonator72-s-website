@@ -1,0 +1,26 @@
+name: Satelito
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so the job can access it
+      - uses: actions/checkout@v4
+
+      # Sets up Lua, luarocks and Satelito
+      - name Setup
+        uses: leafo/gh-actions-lua@v10
+        uses: leafo/gh-actions-luarocks@v4
+        run: |
+          luarocks install satelito --local
+          satelito make --export
