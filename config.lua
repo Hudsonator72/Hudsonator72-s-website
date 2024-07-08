@@ -33,5 +33,10 @@ return {
   ]]
   metas = {
     generator = "Satelito",
+  },
+  author = {
+    name = "Hudsonator72",
+    uri = "https://hudsonator72.github.io",
+    relme = {},
   }
 }
