@@ -7,7 +7,7 @@ return {
     - paths.*
     - mimetypes.*
   ]]
-  sitemapxml = true,
+  sitemapxml = false,
   siteurl = "https://hudsonator72.github.io",
   language = "en",
 
