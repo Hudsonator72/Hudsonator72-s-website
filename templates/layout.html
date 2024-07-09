@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html lang="<%= language -%>">
+<html lang="<%= language -%>" style="height: 100%;">
 	<head>
-		<%- head %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!---<%- head %>-->
+<style>
+p {
+	margin: 0;
+	padding: 0;
+}
+</style>
 	</head>
-	<body class="body <%- template or posttype or 'default' %>" id="body" style="margin: 0; padding: 0;">
-		<%- navigation %>
-
-		<main class="main" id="main">
-			<%- post %>
+	<body class="body <%- template or posttype or 'default' %>" id="body" style="margin: 0; padding: 0; background-color: darkgreen; height: 100%;">
+		<p style="height:54px;background-color:green;">header</p>
+		<main class="main" id="main" style="min-height:calc(100% - 76px);box-sizing:border-box;padding:20px;">
+			<div style="border-radius:5px;background-color:green;box-sizing:border-box;padding:10px;">
+				<%- post %>
+			</div>
 		</main>
-		
-		<%- footer %>
+		<p style="height:22px;font-size:10px;">footer</p>
 	</body>
 </html>
