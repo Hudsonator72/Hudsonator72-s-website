@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="<%= language -%>">
 	<head>
-		<%- head %>
+	
 	</head>
-	<body class="body" id="body">
-		<header class="header">
-			<%- navigation %>
-		</header>
+	<body class="body <%- template or posttype or 'default' %>" id="body">
+		<%- navigation %>
 
 		<main class="main" id="main">
 			<%- post %>
 		</main>
 		
-		<footer class="footer" id="footer">
-			<%- footer %>
-		</footer>
+		<%- footer %>
 	</body>
 </html>
